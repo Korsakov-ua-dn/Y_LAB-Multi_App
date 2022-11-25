@@ -1,0 +1,52 @@
+.Message {
+    position: relative;
+    display: flex;
+    padding: 10px 10px 20px 10px;
+    background-color: rgb(187, 230, 247);
+    border-radius: 4px;
+    margin-bottom: 10px;
+    margin-right: auto;
+}
+
+.Message-my {
+    margin-right: 0;
+    margin-left: auto;
+    background-color: rgb(238, 247, 187);
+}
+
+.Message-avatar {
+    object-fit: cover;
+    object-position: center;
+    border-radius: 100%;
+    margin-right: 10px;
+}
+
+.Message-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.Message-user {
+    font-size: 18px;
+    color: #8b8b8b;
+    font-weight: 700;
+    margin-right: 10px;
+}
+
+.Message-date {
+    font-size: 18px;
+    color: #8b8b8b;
+}
+
+.Message-text {
+    width: 330px;
+    word-wrap: break-word;
+    font-size: 18px;
+}
+
+.Message-delivered {
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+}
+

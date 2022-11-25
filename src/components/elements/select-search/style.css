@@ -1,0 +1,17 @@
+.SelectSearch-wrapper{
+    position: relative;
+}
+.SelectSearch{
+    box-sizing: border-box;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 9px 6px 30px;
+    background-color: #FFFFFF;
+}
+.SelectSearch-angle-down{
+    width: 12px;
+    height: 7px;
+    background: url("@src/assets/img/angle-down.svg")
+}

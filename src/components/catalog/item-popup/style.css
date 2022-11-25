@@ -1,0 +1,42 @@
+/* Пункт списка */
+.ItemPopup {
+    display: flex;
+    justify-content: flex-start;
+    transition: background-color 1s,
+                color 1s;
+    padding-left: 10px;
+}
+
+.ItemPopup-selected {
+    background-color: #6F7EFF;
+    color: #ffffff;
+}
+
+.ItemPopup-id {
+    padding: 20px 10px 20px 20px;
+}
+
+.ItemPopup-title {
+    width: 100%;
+    padding: 20px 10px;
+}
+
+.ItemPopup-title a{
+    text-decoration: none;
+}
+
+.ItemPopup-title a:hover{
+    text-decoration: underline;
+}
+
+.ItemPopup-right {
+    padding: 20px 20px 20px 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.ItemPopup-price {
+    padding: 0 10px;
+    white-space: nowrap;
+}

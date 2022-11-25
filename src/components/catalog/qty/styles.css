@@ -1,0 +1,49 @@
+/* Пункт списка */
+.Qty {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    min-height: 100px;
+}
+.Qty-call {
+
+}
+.Qty-panel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    min-height: 100px;
+}
+.Qty-amount {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #000000;
+    border-radius: 4px;
+}
+.Qty-up,
+.Qty-down {
+    content: '';
+    position: absolute;
+    background: url("@src/assets/img/angle-down.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 30px;
+    height: 30px;
+    left: 0;
+    cursor: pointer;
+}
+.Qty-up {
+    top: -30px;
+    transform: rotate(180deg);
+}
+.Qty-down {
+    bottom: -30px;
+}
+

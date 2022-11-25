@@ -1,0 +1,44 @@
+.Option{
+    height: 30px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    cursor: pointer;
+}
+.Option:hover{
+    background: #DBDFFF;
+}
+.Option.Option-selected{
+    background: #808DFF;
+    /* pointer-events: none; ломает выбор кликом после search => срабатывает click на window*/ 
+}
+.Option-selected .Option-item{
+    color: #FFFFFF;
+}
+.Option-item{
+    max-width: 188px;
+    font-size: 15px;
+    line-height: 17px;
+    color: #191F4D;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.Option-item::before{
+    content: attr(data-code);
+    position: absolute;
+    left: 6px;
+    top: 6px;
+    width: 18px;
+    height: 18px;
+    font-weight: 700;
+    font-size: 8px;
+    line-height: 9px;
+    color: #FFFFFF;
+    background: #6F7EFF;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

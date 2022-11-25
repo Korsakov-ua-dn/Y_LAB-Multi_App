@@ -1,0 +1,19 @@
+.Canvas-panel {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    gap: 20px;
+    box-sizing: border-box;
+    padding: 10px 20px;
+    background-color: antiquewhite;
+}
+
+.Canvas-panel-button {
+
+}
+
+.Canvas-panel-params {
+    max-width: 400px;
+    width: 100%;
+    padding: 0 5px;
+}
