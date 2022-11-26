@@ -76,6 +76,14 @@ let config = {
       },
     ],
   },
+  prodServer: {
+    historyApiFallback: true,
+    proxy: {
+      '/api/**': {
+        target: 'http://example.front.ylab.io',
+      },
+    },
+  },
 };
 
 // Локальный сервер для отладки приложения
