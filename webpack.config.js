@@ -75,15 +75,7 @@ let config = {
         type: 'asset',
       },
     ],
-  },
-  prodServer: {
-    historyApiFallback: true,
-    proxy: {
-      '/api/**': {
-        target: 'http://example.front.ylab.io',
-      },
-    },
-  },
+  }
 };
 
 // Локальный сервер для отладки приложения
@@ -93,6 +85,20 @@ if (process.env.NODE_ENV === 'development') {
     static: path.join(__dirname, 'dist'),
     historyApiFallback: true,
     port: 8020,
+    // Прокси на апи, если режим разработки
+    proxy: {
+      '/api/**': {
+        target: 'http://example.front.ylab.io',
+        secure: false,
+        changeOrigin: true,
+      },
+    },
+  };
+} else {
+  config.prodServer = {
+    static: path.join(__dirname, 'dist'),
+    historyApiFallback: true,
+    // port: 8020,
     // Прокси на апи, если режим разработки
     proxy: {
       '/api/**': {
