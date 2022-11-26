@@ -94,21 +94,6 @@ if (process.env.NODE_ENV === 'development') {
       },
     },
   };
-} else {
-  config.devtool = 'inline-source-map';
-  config.devServer = {
-    static: path.join(__dirname, 'dist'),
-    historyApiFallback: true,
-    port: 443,
-    // Прокси на апи, если режим продакшена
-    proxy: {
-      '/api/**': {
-        target: 'http://example.front.ylab.io',
-        secure: false,
-        changeOrigin: true,
-      },
-    },
-  };
 }
 
 module.exports = config;
