@@ -5,6 +5,7 @@ const webpack = require('webpack');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const path = require('path');
 
 // Опции webpack
@@ -14,7 +15,7 @@ let config = {
   output: {
     path: path.join(__dirname, 'dist'), // Куда и как делать сборку
     filename: '[name].js',
-    // clean: true, // Очистить ./dist от предыдущей сборки
+    clean: true, // Очистить ./dist от предыдущей сборки
   },
   plugins: [
     new ProgressBarPlugin(),
@@ -31,6 +32,11 @@ let config = {
       filename: './index.html',
       base: '/',
     }),
+    new CopyWebpackPlugin({
+      patterns: [
+          { from: 'static' }
+      ]
+  })
   ],
   //
   resolve: {
