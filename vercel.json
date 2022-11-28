@@ -1,0 +1,9 @@
+{
+    "redirects": [
+      {
+        "source": "https://y-lab-multi-app.vercel.app/api/:path*",
+        "permanent": false,
+        "destination": "http://example.front.ylab.io/api/:path*"
+      }
+    ]
+}
