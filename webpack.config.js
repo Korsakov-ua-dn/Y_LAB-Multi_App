@@ -14,7 +14,7 @@ let config = {
   output: {
     path: path.join(__dirname, 'dist'), // Куда и как делать сборку
     filename: '[name].js',
-    clean: true, // Очистить ./dist от предыдущей сборки
+    // clean: true, // Очистить ./dist от предыдущей сборки
   },
   plugins: [
     new ProgressBarPlugin(),
