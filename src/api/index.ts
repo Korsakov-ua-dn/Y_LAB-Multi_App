@@ -29,8 +29,10 @@ class APIService {
    * @returns {Promise<any>}
    */
   async request({url, method = 'GET', headers = {}, ...options}): Promise<any> {
-    if (!url.match(/^(http|\/\/)/)) url = this.config.baseUrl + url;
-    const res = await fetch(url, {
+    // if (!url.match(/^(http|\/\/)/)) url = this.config.baseUrl + url;
+    // console.log("url: ", this.config.baseUrl);
+    
+    const res = await fetch("http://example.front.ylab.io" + url, {
       method,
       headers: {...this.defaultHeaders, ...headers},
       ...options,
