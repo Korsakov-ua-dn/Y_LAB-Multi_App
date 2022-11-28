@@ -32,7 +32,7 @@ let config = {
       filename: './index.html',
       base: '/',
     }),
-    new CopyWebpackPlugin({
+    new CopyWebpackPlugin({ // добавление _redirects для netlify
       patterns: [
           { from: 'static' }
       ]
