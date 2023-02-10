@@ -15,7 +15,7 @@ const config = {
   storeRedux: {},
 
   api: {
-    baseUrl: process.env.REACT_APP_PUBLIC_API_URL || ''
+    baseUrl: process.env.NODE_ENV === 'production' ? "http://example.front.ylab.io/api/v1" : ''
   },
 
   ws: {
@@ -23,7 +23,7 @@ const config = {
   },
 }
 
-console.log("config: ", process.env.REACT_APP_PUBLIC_API_URL);
+console.log("config: ", process.env.NODE_ENV === 'production');
 
 
 export default config;
