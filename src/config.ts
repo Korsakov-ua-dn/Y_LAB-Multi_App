@@ -15,7 +15,7 @@ const config = {
   storeRedux: {},
 
   api: {
-    baseUrl: process.env.NODE_ENV === 'production' ? "http://example.front.ylab.io/" : ''
+    baseUrl: process.env.NODE_ENV === 'production' ? "http://example.front.ylab.io" : ''
   },
 
   ws: {
