@@ -15,7 +15,7 @@ const config = {
   storeRedux: {},
 
   api: {
-    baseUrl: ''
+    baseUrl: process.env.REACT_APP_PUBLIC_API_URL || ''
   },
 
   ws: {
