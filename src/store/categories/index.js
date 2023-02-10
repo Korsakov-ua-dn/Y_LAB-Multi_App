@@ -22,7 +22,7 @@ class CategoriesState extends StateModule{
    */
   async load(){
     this.setState({ waiting: true, items: []}, 'Ожидание загрузки категорий');
-
+    console.log(this.services.api);
     const params = {fields:'_id,title,parent(_id)', limit:'*'};
     const json = await this.services.api.request({url: `/api/v1/categories/${qs.stringify(params)}`});
 
