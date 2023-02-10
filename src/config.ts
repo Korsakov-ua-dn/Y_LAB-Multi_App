@@ -15,16 +15,13 @@ const config = {
   storeRedux: {},
 
   api: {
-    baseUrl: process.env.NODE_ENV === 'production' ? "http://example.front.ylab.io" : ''
+    baseUrl: ''
   },
 
   ws: {
     
   },
 }
-
-console.log("config: ", process.env.NODE_ENV === 'production');
-
 
 export default config;
 
