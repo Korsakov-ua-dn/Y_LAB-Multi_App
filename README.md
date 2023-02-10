@@ -1,6 +1,13 @@
-# Study project Front-2022
+# Не коммерческий проект фронтенд приложение
 
-Учебный проект на React
+Проект на React.
+Rest API / Custom State Manager / Canvas / WebSocket / Multi Modals / Modals Manager / Infinity Scroll
+1. Главная страница: Каталог товаров, Корзина, Меню, кнопка логинизации
+  - страница логинизация
+  - страница профиль пользователя
+  - страница товара
+2. Чат
+3. Канвас
 
 ## Требования
 
@@ -41,9 +48,9 @@ Nginx должен отдавать статичные файлы из `./dist`,
 ```
 server {
     listen 80;
-    server_name study-front2022.com;
+    server_name front.com;
     location / {
-        root /home/user/study-front2022/dist;
+        root /home/user/front/dist;
         try_files $uri /index.html;
     }
 }
